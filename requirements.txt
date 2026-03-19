@@ -1,0 +1,41 @@
+# ── Voice Command Pipeline — Python Dependencies ──────────────────────────────
+# Install with:  pip install -r requirements.txt
+#
+# Python 3.10+ required.
+
+# Audio capture
+pyaudio==0.2.14
+
+# Numerical processing / DSP
+numpy==1.26.4
+scipy==1.13.0
+
+# TFLite inference (choose ONE — see note below)
+# Option A — lightweight runtime only (recommended, ~2 MB):
+tflite-runtime==2.14.0
+# Option B — full TensorFlow (large ~500 MB, use if tflite-runtime fails):
+# tensorflow==2.16.1
+
+# Offline speech-to-text
+vosk==0.3.45
+
+# NLP — intent + entity extraction
+spacy==3.7.4
+# After installing spaCy, download the English model:
+#   python -m spacy download en_core_web_sm
+
+# Environment variable loading
+python-dotenv==1.0.1
+
+# ── Notes ──────────────────────────────────────────────────────────────────────
+# tflite-runtime on Windows x64 (Python 3.10 / 3.11):
+#   pip install tflite-runtime==2.14.0
+#
+# If tflite-runtime is unavailable for your Python version, install tensorflow:
+#   pip uninstall tflite-runtime
+#   pip install tensorflow
+#
+# PyAudio on Windows may need the pre-built wheel:
+#   pip install pipwin
+#   pipwin install pyaudio
+#   OR download from: https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio

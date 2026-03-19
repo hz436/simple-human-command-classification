@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-03-19 14:57:22",
+  "source": "vosk_spacy",
+  "intent": "navigation",
+  "confidence": 0.62,
+  "entities": {
+    "action": "stop"
+  },
+  "original_text": "stop",
+  "action_message": "[ACTION] Navigation  \u2192  stop"
+}
